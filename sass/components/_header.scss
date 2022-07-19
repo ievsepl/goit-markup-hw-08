@@ -1,0 +1,97 @@
+/* header */
+
+.header {
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+
+  &__flex {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+  }
+}
+
+.site-nav {
+  display: flex;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav__item + .site-nav__item {
+  margin-left: 50px;
+}
+
+.site-nav__link {
+  color: $secondary-text-color;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  :focus {
+    color: $accent-color;
+  }
+}
+.site-nav__item {
+  position: relative;
+}
+.site-nav__current {
+  color: $accent-color;
+  &:after {
+    content: '';
+    display: flex;
+    background-color: $accent-color;
+    border: 2px solid $accent-color;
+    border-radius: 2px;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+  }
+}
+
+// CONTACTS
+
+.contact-us {
+  display: flex;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contact-us__contact {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $main-text-color;
+  fill: $main-text-color;
+}
+
+.contact-us__tell-mail:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contact-us__icon {
+  margin-right: 10px;
+}
+
+.contact-us__contact {
+  display: flex;
+  align-items: center;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-us__contact:hover,
+.contact-us__contact:focus {
+  color: $accent-color;
+  fill: $accent-color;
+}

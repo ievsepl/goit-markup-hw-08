@@ -1,0 +1,42 @@
+/* skills */
+.skills {
+  padding-bottom: 0;
+}
+
+.skills__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+  margin-bottom: 10px;
+}
+
+.skills__desc {
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.skills__list {
+  display: flex;
+}
+
+.skills__item {
+  flex-basis: calc((100% - (3 * 30px) / 4));
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.skills__picture {
+  width: 270px;
+  height: 120px;
+  background-color: $secondary-background-color;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

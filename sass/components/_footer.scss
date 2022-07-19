@@ -1,0 +1,74 @@
+.footer {
+  background: #2f303a;
+  padding: 60px 0;
+}
+
+.footer__flex {
+  display: flex;
+}
+
+.footer__info {
+  margin-right: 70px;
+}
+
+.footer__adress {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $main-white-color;
+  margin-bottom: 9px;
+}
+
+.footer__contact {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 9px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.footer__social-links {
+  margin-right: 93px;
+}
+
+.footer__socLink-form-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: $main-white-color;
+  text-align: left;
+  display: block;
+}
+
+.footer__form {
+  align-items: flex-end;
+}
+
+.footer__subscribe {
+  margin-right: 12px;
+}
+
+.footer__input {
+  width: 358px;
+  height: 50px;
+
+  padding-left: 16px;
+
+  background-color: #2f303a;
+  color: rgba(237, 72, 72, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

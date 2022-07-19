@@ -1,0 +1,37 @@
+/* our crew */
+
+.main__crew {
+  background-color: $secondary-background-color;
+  text-align: center;
+}
+
+.crew-list {
+  display: flex;
+}
+
+.crew-list__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  color: $secondary-text-color;
+  margin-bottom: 10px;
+}
+
+.crew-list__desc {
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 16px;
+}
+
+.crew-list__item:not(:last-child) {
+  margin-right: $work-examples-gap;
+}
+
+.crew-list__info {
+  background-color: $main-white-color;
+  padding-top: $work-examples-gap;
+  padding-bottom: $work-examples-gap;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}

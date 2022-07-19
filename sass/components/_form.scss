@@ -1,0 +1,134 @@
+/* form  */
+
+.feedback {
+  text-align: center;
+}
+
+.feedback__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $secondary-text-color;
+  margin-bottom: 12px;
+}
+
+.field {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 0;
+
+  display: block;
+  justify-content: center;
+}
+
+.field__name {
+  margin-bottom: 4px;
+  display: block;
+}
+
+.field__icon {
+  position: absolute;
+  top: 29px;
+  left: 12px;
+}
+
+.field__input,
+.field__textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  resize: none;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $accent-color;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:focus ~ .field__icon {
+    fill: $accent-color;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.field__input {
+  padding-left: 30px;
+}
+
+.field__textarea {
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.agreement {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 30px;
+  padding-left: 35px;
+
+  display: flex;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.agreement__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.feedback__agreement {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  display: inline-block;
+  color: $accent-color;
+}
+
+.agreement__custom {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $secondary-text-color;
+  border-radius: 2px;
+}
+
+.agreement__icon {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agreement__checkbox:checked + .agreement__icon {
+  background-color: $accent-color;
+  border-radius: 2px;
+  z-index: 1;
+}

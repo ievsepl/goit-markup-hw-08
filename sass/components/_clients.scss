@@ -1,0 +1,34 @@
+/* clients */
+
+.clients {
+  display: flex;
+}
+
+.clients__list {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.clients__link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid $main-icon-color;
+  border-radius: 4px;
+  fill: $main-icon-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
