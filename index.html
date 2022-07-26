@@ -18,37 +18,57 @@
 <!-- header -->
 <header class="header">
   <div class="container header__flex">
-    <nav class="header__nav">
-      <a class="logo" href="./index.html">Web<span class="logo__span">Studio</span></a>
+    <a class="logo" href="./index.html">Web<span class="logo__span">Studio</span></a>
 
-      <ul class="site-nav">
-        <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__current">Студия</a>
+    <button type="button" class="header__menu" aria-expanded="false" aria-controls="menu-container" data-menu-open>
+      <svg class="header__icon-open" width="40" height="40" aria-label="перемикач моб.меню">
+        <use class="" href=" ./img/icons.svg#icon-menu"></use>
+      </svg>
+    </button>
+
+    <div class="hz" id="menu-container" data-menu>
+      <button type="button" class="header__menu header__menu-close" aria-expanded="false" aria-controls="menu-container"
+        data-menu-close>
+        <svg class="header__icon-close" width="40" height="40" aria-label="перемикач моб.меню">
+          <use class="" href=" ./img/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="header__nav">
+        <ul class="site-nav">
+          <li class="site-nav__item"><a href="./index.html" class="site-nav__link site-nav__current">Студия</a>
+          </li>
+          <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
+          <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="contact-us">
+        <li class="contact-us__tell-mail">
+
+          <a href="mailto:info@devstudio.com" class="contact-us__contact contact-us__mail">
+            <svg class="contact-us__icon" width="16" height="12">
+              <use href=" ./img/icons.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a>
+
         </li>
-        <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link">Портфолио</a></li>
-        <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+        <li class="contact-us__tell-mail">
+          <a href="tell:+380961111111" class="contact-us__contact contact-us__tel">
+            <svg class="contact-us__icon" width="10" height="16">
+              <use href="./img/icons.svg#icon-smartphone"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
       </ul>
+      <ul class="header__soc-links-list">
+        <li class="header__soc-links-item">Instagram</li>
+        <li class="header__soc-links-item">Twitter</li>
+        <li class="header__soc-links-item">Facebook</li>
+        <li class="header__soc-links-item">Linkedin</li>
+      </ul>
+    </div>
 
-    </nav>
 
-    <ul class="contact-us">
-      <li class="contact-us__tell-mail">
-
-        <a href="mailto:info@devstudio.com" class="contact-us__contact">
-          <svg class="contact-us__icon" width="16" height="12">
-            <use href=" ./img/icons.svg#icon-envelope"></use>
-          </svg>
-          info@devstudio.com</a>
-
-      </li>
-      <li class="contact-us__tell-mail">
-        <a href="tell:+380961111111" class="contact-us__contact">
-          <svg class="contact-us__icon" width="10" height="16">
-            <use href="./img/icons.svg#icon-smartphone"></use>
-          </svg>
-          +38 096 111 11 11
-        </a>
-      </li>
-    </ul>
   </div>
 </header>
 
@@ -116,21 +136,24 @@
 
 
   <!-- our specialization -->
-  <section class="section ">
+  <section class="section main__specialization ">
     <div class="container">
-      <h2 class="section__title">Чем мы занимаемся</h2>
+      <h2 class="section__title section__specialization">Чем мы занимаемся</h2>
       <ul class="specialization">
         <li class="specialization__item">
           <h3 class="specialization__desc">Десктопные приложения</h3>
-          <img src="./img/work-on-laptop1.jpg" alt="Робота на планшеті" width="370" />
+          <img srcset="./img/specialization-1@1x.jpg 1x, ./img/specialization-1@2x.jpg 2x"
+            src="./img/specialization-1@1x.jpg" alt="Робота на планшеті" />
         </li>
         <li class="specialization__item">
           <h3 class="specialization__desc">Мобильные приложения</h3>
-          <img src="./img/work-on-laptop2.jpg" alt="Робота за ноутбуком" width="370" />
+          <img srcset="./img/specialization-2@1x.jpg 1x, ./img/specialization-2@2x.jpg 2x"
+            src="./img/specialization-2@1x.jpg" alt="Робота на планшеті" />
         </li>
         <li class="specialization__item">
           <h3 class="specialization__desc">Дизайнерские решения</h3>
-          <img src="./img/work-on-laptop3.jpg" alt="Робота на планшеті" width="370" />
+          <img srcset="./img/specialization-3@1x.jpg 1x, ./img/specialization-3@2x.jpg 2x"
+            src="./img/specialization-3@1x.jpg" alt="Робота на планшеті" />
         </li>
       </ul>
     </div>
@@ -140,10 +163,18 @@
   <!--our crew -->
   <section class="section main__crew">
     <div class="container">
-      <h2 class="section__title">Наша команда</h2>
+      <h2 class="section__title section__name">Наша команда</h2>
       <ul class="crew-list">
         <li class="crew-list__item">
-          <img src="./img/ihor-demianenko.jpg" alt="Игорь Демьяненко" width="270" />
+          <picture class="crew-list__photo">
+            <source srcset="./img/ihor-comp@1x.jpg 1x, ./img/ihor-comp@2x.jpg 2x" media="(min-width:1200px)"
+              sizes="270px" />
+            <source srcset="./img/ihor-tab@1x.jpg 1x, ./img/ihor-tab@2x.jpg 2x " media="(min-width:768px)"
+              sizes="354px" />
+            <source srcset="./img/ihor-mob@1x.jpg 1x, ./img/ihor-mob@2x.jpg 2x" sizes="450px" />
+            <img src="./img/ihor-comp@1x.jpg" alt="Игорь Демьяненко" />
+          </picture>
+
           <div class="crew-list__info">
             <h3 class="crew-list__title">Игорь Демьяненко</h3>
             <p class="crew-list__desc">Product Designer</p>
@@ -185,7 +216,14 @@
 
         </li>
         <li class="crew-list__item">
-          <img src="./img/olha-repina.jpg" alt="Ольга Репина" width="270" />
+          <picture class="crew-list__photo">
+            <source srcset="./img/olha-comp@1x.jpg 1x, ./img/olha-comp@2x.jpg 2x" media="(min-width:1200px)"
+              sizes="270px" />
+            <source srcset="./img/olha-tab@1x.jpg 1x, ./img/olha-tab@2x.jpg 2x " media="(min-width:768px)"
+              sizes="354px" />
+            <source srcset="./img/olha-mob@1x.jpg 1x, ./img/olha-mob@2x.jpg 2x" sizes="450px" />
+            <img src="./img/olha-comp@1x.jpg" alt="Ольга Репина" />
+          </picture>
 
           <div class="crew-list__info">
             <h3 class="crew-list__title">Ольга Репина</h3>
@@ -228,7 +266,14 @@
 
         </li>
         <li class="crew-list__item">
-          <img src="./img/nikolai-tarasov.jpg" alt="Николай Тарасов" width="270" />
+          <picture class="crew-list__photo">
+            <source srcset="./img/kolya-comp@1x.jpg 1x, ./img/kolya-comp@2x.jpg 2x" media="(min-width:1200px)"
+              sizes="270px" />
+            <source srcset="./img/kolya-tab@1x.jpg 1x, ./img/kolya-tab@2x.jpg 2x " media="(min-width:768px)"
+              sizes="354px" />
+            <source srcset="./img/kolya-mob@1x.jpg 1x, ./img/kolya-mob@2x.jpg 2x" sizes="450px" />
+            <img src="./img/kolya-comp@1x.jpg" alt="Николай Тарасов" />
+          </picture>
 
           <div class="crew-list__info">
             <h3 class="crew-list__title">Николай Тарасов</h3>
@@ -271,7 +316,14 @@
 
         </li>
         <li class="crew-list__item">
-          <img src="./img/mikhail-ermakov.jpg" alt="Михаил Ермаков" width="270" />
+          <picture class="crew-list__photo">
+            <source srcset="./img/misha-comp@1x.jpg 1x, ./img/misha-comp@2x.jpg 2x" media="(min-width:1200px)"
+              sizes="270px" />
+            <source srcset="./img/misha-tab@1x.jpg 1x, ./img/misha-tab@2x.jpg 2x " media="(min-width:768px)"
+              sizes="354px" />
+            <source srcset="./img/misha-mob@1x.jpg 1x, ./img/misha-mob@2x.jpg 2x" sizes="450px" />
+            <img src="./img/misha-comp@1x.jpg" alt="Михаил Ермаков" />
+          </picture>
 
           <div class="crew-list__info">
             <h3 class="crew-list__title">Михаил Ермаков</h3>
@@ -319,52 +371,55 @@
 
   <!-- our clients -->
   <section class="section ">
-    <h2 class="section__title">Постоянные клиенты</h2>
-    <ul class="container clients">
-      <li class="clients__list">
-        <a href="" class="clients__link">
-          <svg class="clients-icon" width="106" height="60">
-            <use href=" ./img/icons.svg#icon-logo-1"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="clients__list">
-        <a href="" class="clients__link">
-          <svg class="clients-icon" width="106" height="60">
-            <use href=" ./img/icons.svg#icon-logo-2"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="clients__list">
-        <a href="" class="clients__link">
-          <svg class="clients-icon" width="106" height="60">
-            <use href=" ./img/icons.svg#icon-logo-3"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="clients__list">
-        <a href="" class="clients__link">
-          <svg class="clients-icon" width="106" height="60">
-            <use href=" ./img/icons.svg#icon-logo-4"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="clients__list">
-        <a href="" class="clients__link">
-          <svg class="clients-icon" width="106" height="60">
-            <use href=" ./img/icons.svg#icon-logo-5"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="clients__list">
-        <a href="" class="clients__link">
-          <svg class="clients-icon" width="106" height="60">
-            <use href=" ./img/icons.svg#icon-logo-6"></use>
-          </svg>
-        </a>
-      </li>
+    <div class="container">
+      <h2 class="section__title">Постоянные клиенты</h2>
+      <ul class="clients">
+        <li class="clients__list">
+          <a href="" class="clients__link">
+            <svg class="clients-icon" width="106" height="60">
+              <use href=" ./img/icons.svg#icon-logo-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="clients__list">
+          <a href="" class="clients__link">
+            <svg class="clients-icon" width="106" height="60">
+              <use href=" ./img/icons.svg#icon-logo-2"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="clients__list">
+          <a href="" class="clients__link">
+            <svg class="clients-icon" width="106" height="60">
+              <use href=" ./img/icons.svg#icon-logo-3"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="clients__list">
+          <a href="" class="clients__link">
+            <svg class="clients-icon" width="106" height="60">
+              <use href=" ./img/icons.svg#icon-logo-4"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="clients__list">
+          <a href="" class="clients__link">
+            <svg class="clients-icon" width="106" height="60">
+              <use href=" ./img/icons.svg#icon-logo-5"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="clients__list">
+          <a href="" class="clients__link">
+            <svg class="clients-icon" width="106" height="60">
+              <use href=" ./img/icons.svg#icon-logo-6"></use>
+            </svg>
+          </a>
+        </li>
 
-    </ul>
+      </ul>
+    </div>
+
   </section>
 
 </main>
@@ -481,7 +536,7 @@
 
       </label>
 
-      <label class="field">
+      <label class="field field--comment">
         <span class="field__name">Комментарий</span>
         <textarea name="comment" rows="5" placeholder="Введите текст" class="field__textarea"></textarea>
       </label>

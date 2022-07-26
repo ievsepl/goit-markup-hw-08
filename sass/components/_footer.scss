@@ -1,14 +1,10 @@
 .footer {
+  // width: 480px;
   background: #2f303a;
   padding: 60px 0;
-}
-
-.footer__flex {
-  display: flex;
-}
-
-.footer__info {
-  margin-right: 70px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__adress {
@@ -16,12 +12,12 @@
   font-size: 14px;
   line-height: 1.71;
   color: $main-white-color;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .footer__contact {
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -33,8 +29,8 @@
   }
 }
 
-.footer__social-links {
-  margin-right: 93px;
+.footer__info {
+  margin-bottom: 60px;
 }
 
 .footer__socLink-form-title {
@@ -44,20 +40,20 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   color: $main-white-color;
-  text-align: left;
-  display: block;
+}
+// .footer__form span {
+//   margin-bottom: 50px;
+// }
+.footer__input {
+  margin-top: 20px;
 }
 
-.footer__form {
-  align-items: flex-end;
-}
-
-.footer__subscribe {
-  margin-right: 12px;
+.footer__social-links {
+  margin-bottom: 60px;
 }
 
 .footer__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
 
   padding-left: 16px;
@@ -70,5 +66,66 @@
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
+  }
+  margin-bottom: 20px;
+}
+@media screen and(min-width:768px) {
+  .footer__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__info {
+    margin-right: 165px;
+  }
+  .footer__form {
+    width: 450px;
+  }
+}
+@media screen and(min-width:1200px) {
+  .footer {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer__flex {
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+  .footer__info {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
+
+  .footer__adress {
+    margin-bottom: 9px;
+  }
+
+  .footer__contact {
+    margin-bottom: 9px;
+  }
+  .footer__social-links {
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
+  .footer__socLink-form-title {
+    text-align: left;
+    display: block;
+  }
+
+  .footer__form {
+    align-items: flex-end;
+    width: auto;
+  }
+
+  // .footer__subscribe {
+  //   margin-right: 12px;
+  // }
+
+  .footer__input {
+    margin-top: 20px;
+    width: 358px;
+    margin: 0;
+    margin-right: 12px;
   }
 }

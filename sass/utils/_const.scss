@@ -37,6 +37,9 @@ body {
   color: $main-text-color;
   letter-spacing: 0.03em;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 .visually-hidden {
   position: absolute;
@@ -51,8 +54,28 @@ body {
 }
 
 .container {
-  width: 1200px;
+  // width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+  border: 1px solxid green;
 }
+@media screen and(min-width:480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and(min-width:768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and(min-width:1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+//
+//
+//
