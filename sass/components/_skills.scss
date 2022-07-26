@@ -36,6 +36,9 @@
     flex-basis: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
+  .skills__title {
+    text-align: left;
+  }
 }
 
 @media screen and(min-width:1200px) {
