@@ -82,6 +82,7 @@
     width: 100%;
     background: $main-white-color;
     // flex-direction: reverse;
+    z-index: 9;
   }
   .header__menu-close {
     position: absolute;

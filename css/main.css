@@ -207,6 +207,7 @@ body.modal-open {
     display: block;
     width: 100%;
     background: #ffffff;
+    z-index: 9;
   }
   .header__menu-close {
     position: absolute;
