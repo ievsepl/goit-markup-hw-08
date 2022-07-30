@@ -205,7 +205,7 @@ body.modal-open {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479.9px) {
   .header .contact-us__tel-link {
     font-size: 26px;
   }
@@ -352,8 +352,8 @@ body.modal-open {
   }
   .contact-us {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     margin-left: 84px;
   }
@@ -363,6 +363,12 @@ body.modal-open {
   }
   .contact-us__icon {
     margin-right: 10px;
+  }
+  .contact-us__icon-tel {
+    width: 10px;
+  }
+  .contact-us__icon-mail {
+    width: 14px;
   }
   .contact-us__contact {
     display: -webkit-box;
@@ -408,6 +414,8 @@ body.modal-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 14px;
+    line-height: 1.14;
     margin-left: 305px;
   }
   .contact-us__contact {
@@ -416,6 +424,12 @@ body.modal-open {
   }
   .contact-us__tell-mail:not(:last-child) {
     margin-right: 30px;
+  }
+  .contact-us__icon-tel {
+    width: 12px;
+  }
+  .contact-us__icon-mail {
+    width: 16px;
   }
 }
 .section {
@@ -452,12 +466,13 @@ body.modal-open {
   background-repeat: no-repeat;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/banner-480px@1x.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/banner-480px@1x.jpg);
-  background-size: 480px 400px;
+  background-size: cover;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .banner {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/banner-480px@2x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/banner-480px@2x.jpg);
+    background-size: cover;
   }
 }
 
@@ -928,6 +943,9 @@ body.modal-open {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   .footer__info {
     margin-right: 165px;
@@ -1074,7 +1092,7 @@ body.modal-open {
   padding: 77px 24px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479.9px) {
   .card__desc {
     font-size: 14px;
     padding: 24px;
