@@ -17,7 +17,6 @@
 
 .footer__contact {
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 8px;
 
   transition-property: color;
   transition-duration: 250ms;
@@ -28,7 +27,9 @@
     color: $accent-color;
   }
 }
-
+.footer__contact-item {
+  margin-bottom: 8px;
+}
 .footer__info {
   margin-bottom: 60px;
 }
@@ -80,6 +81,9 @@
   }
   .footer__form {
     width: 450px;
+  }
+  .footer__social-links {
+    margin-bottom: 0;
   }
 }
 @media screen and(min-width:1200px) {
